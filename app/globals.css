@@ -1,0 +1,164 @@
+/* import tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* import inter for clean ui */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+/* import fraunces for elegant serif headlines */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap');
+/* import dm sans for logo - matches slash's gothic style */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap');
+
+/* base styles */
+@layer base {
+  /* smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+    /* optical rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* dark background */
+  body {
+    /* inter font */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+    /* pure black */
+    background-color: #000000;
+    /* white text */
+    color: #FFFFFF;
+  }
+}
+
+/* component utilities */
+@layer components {
+  /* 3D transform utilities */
+  .perspective-[1000px] {
+    perspective: 1000px;
+  }
+  
+  .transform-style-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .rotate-x-180 {
+    transform: rotateX(180deg);
+  }
+  
+  /* ensure minimum padding on all sections */
+  .section-padding {
+    /* responsive padding that never touches edges */
+    @apply px-6 sm:px-8 md:px-12 lg:px-20;
+  }
+  
+  /* primary button */
+  .btn-primary {
+    /* white background */
+    @apply bg-white;
+    /* black text */
+    @apply text-black;
+    /* height and padding */
+    @apply h-12 px-8;
+    /* fully rounded */
+    @apply rounded-full;
+    /* semibold */
+    @apply font-semibold;
+    /* text size */
+    @apply text-sm;
+    /* smooth transition */
+    @apply transition-all duration-300;
+    /* flex center */
+    @apply inline-flex items-center justify-center;
+    /* hover scale */
+    @apply hover:scale-105;
+    /* shadow on hover */
+    @apply hover:shadow-xl;
+  }
+  
+  /* secondary button */
+  .btn-secondary {
+    /* transparent */
+    @apply bg-transparent;
+    /* white border */
+    @apply border border-white/20;
+    /* white text */
+    @apply text-white;
+    /* height and padding */
+    @apply h-12 px-8;
+    /* fully rounded */
+    @apply rounded-full;
+    /* semibold */
+    @apply font-semibold;
+    /* text size */
+    @apply text-sm;
+    /* transition */
+    @apply transition-all duration-300;
+    /* flex center */
+    @apply inline-flex items-center justify-center;
+    /* hover */
+    @apply hover:scale-105 hover:border-white/40;
+  }
+  
+  /* display heading */
+  .heading-display {
+    /* fraunces serif */
+    @apply font-serif;
+    /* huge size */
+    @apply text-6xl md:text-7xl lg:text-8xl;
+    /* medium weight */
+    @apply font-medium;
+    /* tight leading */
+    @apply leading-none;
+    /* white */
+    @apply text-white;
+    /* tight tracking */
+    @apply tracking-tightest;
+  }
+  
+  /* h2 heading */
+  .heading-h2 {
+    /* fraunces serif */
+    @apply font-serif;
+    /* large */
+    @apply text-4xl md:text-5xl lg:text-6xl;
+    /* medium */
+    @apply font-medium;
+    /* tight */
+    @apply leading-tight;
+    /* white */
+    @apply text-white;
+    /* tracking */
+    @apply tracking-tighter;
+  }
+  
+  /* body text */
+  .text-body {
+    /* size */
+    @apply text-lg md:text-xl;
+    /* regular */
+    @apply font-normal;
+    /* relaxed leading */
+    @apply leading-relaxed;
+    /* gray not white */
+    @apply text-text-secondary;
+  }
+  
+  /* label */
+  .label {
+    /* small */
+    @apply text-xs;
+    /* uppercase */
+    @apply uppercase;
+    /* wide tracking */
+    @apply tracking-widest;
+    /* bold */
+    @apply font-bold;
+    /* tertiary */
+    @apply text-text-tertiary;
+  }
+}
