@@ -81,7 +81,7 @@ export default function FooterSlash() {
           {/* disclaimer */}
           <div className="space-y-4 text-[11px] leading-relaxed text-text-tertiary">
             <p>
-              Tailwind Financial, Inc. is a financial technology company and is not a bank. This website describes features planned for launch in Q2 2025. Actual product features and availability may vary. Banking services will be provided by Evolve Bank & Trust, Member FDIC. The Tailwind Visa® Commercial Credit Card will be issued by Evolve Bank & Trust pursuant to a license from Visa U.S.A. Inc.
+              Tailwind Financial, Inc. is a financial technology company and is not a bank. This website describes features planned for launch in Q1 2026. Actual product features and availability may vary. Banking services will be provided by Evolve Bank & Trust, Member FDIC. The Tailwind Visa® Commercial Credit Card will be issued by Evolve Bank & Trust pursuant to a license from Visa U.S.A. Inc.
             </p>
             
             <p>

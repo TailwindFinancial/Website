@@ -24,7 +24,7 @@ export default function FAQPage() {
     },
     {
       question: 'When will Tailwind launch?',
-      answer: 'We are targeting Q2 2025 for our beta launch. Waitlist members will receive priority access and exclusive launch benefits.',
+      answer: 'We are targeting Q1 2026 for our beta launch. Waitlist members will receive priority access and exclusive launch benefits.',
     },
     {
       question: 'How does Group Score underwriting work?',
@@ -56,7 +56,7 @@ export default function FAQPage() {
     },
     {
       question: 'How do I get early access?',
-      answer: 'Join our waitlist. We are onboarding in waves starting Q1 2025. Priority given to groups of 4+ with verified cash flow.',
+      answer: 'Join our waitlist. We are onboarding in waves starting Q1 2026. Priority given to groups of 4+ with verified cash flow.',
     },
   ];
 

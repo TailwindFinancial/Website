@@ -9,11 +9,11 @@ import { Shield, Lock, CheckCircle2, Eye } from 'lucide-react';
 // secure by design component
 export default function SecureByDesign() {
   return (
-    <section className="relative py-48 bg-gradient-to-b from-gradient-start via-gradient-end to-gradient-start overflow-hidden">
+    <section className="relative py-24 md:py-48 bg-gradient-to-b from-gradient-start via-gradient-end to-gradient-start overflow-hidden">
       {/* content */}
       <div className="relative z-10 max-w-container mx-auto section-padding">
         {/* header */}
-        <div className="text-center max-w-4xl mx-auto mb-24">
+        <div className="text-center max-w-4xl mx-auto mb-12 md:mb-24">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ export default function SecureByDesign() {
         </div>
         
         {/* security features grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* enhanced fdic */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -42,10 +42,10 @@ export default function SecureByDesign() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Shield className="w-8 h-8 text-primary" />
+            <div className="w-14 h-14 md:w-16 md:h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 md:mb-6">
+              <Shield className="w-7 h-7 md:w-8 md:h-8 text-primary" />
             </div>
-            <h3 className="text-xl font-semibold text-white mb-3">Enhanced FDIC Insurance</h3>
+            <h3 className="text-lg md:text-xl font-semibold text-white mb-2 md:mb-3">Enhanced FDIC Insurance</h3>
             <p className="text-text-secondary text-sm">
               Partner banks provide FDIC coverage up to hundreds of millions through sweep networks.
             </p>

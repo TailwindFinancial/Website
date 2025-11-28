@@ -35,9 +35,9 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="py-48 bg-gradient-to-b from-black to-gradient-start">
+    <section className="py-24 md:py-48 bg-gradient-to-b from-black to-gradient-start">
       {/* section header - proper padding */}
-      <div className="text-center max-w-4xl mx-auto mb-20 section-padding">
+      <div className="text-center max-w-4xl mx-auto mb-12 md:mb-20 section-padding">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -61,7 +61,7 @@ export default function HowItWorks() {
       
       {/* steps grid - with proper padding */}
       <div className="max-w-container mx-auto section-padding">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-8">
           {/* map steps */}
           {steps.map((step, index) => (
           <motion.div
@@ -74,12 +74,12 @@ export default function HowItWorks() {
             className="relative"
           >
             {/* step number */}
-            <div className="text-6xl font-serif font-medium text-primary/20 mb-4">
+            <div className="text-5xl md:text-6xl font-serif font-medium text-primary/20 mb-3 md:mb-4">
               {step.number}
             </div>
             
             {/* step title */}
-            <h3 className="text-xl font-semibold text-white mb-3">
+            <h3 className="text-lg md:text-xl font-semibold text-white mb-2 md:mb-3">
               {step.title}
             </h3>
             

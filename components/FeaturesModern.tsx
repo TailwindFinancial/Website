@@ -7,14 +7,14 @@ import { motion } from 'framer-motion';
 // features component - clean integrated style
 export default function FeaturesModern() {
   return (
-    <section className="relative py-48 bg-gradient-to-b from-gradient-start via-gradient-end to-gradient-start overflow-hidden">
+    <section className="relative py-24 md:py-48 bg-gradient-to-b from-gradient-start via-gradient-end to-gradient-start overflow-hidden">
       {/* background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-glow-primary opacity-30"></div>
       
       {/* content - proper padding */}
       <div className="relative z-10 max-w-container mx-auto section-padding">
         {/* section header */}
-        <div className="text-center max-w-4xl mx-auto mb-32">
+        <div className="text-center max-w-4xl mx-auto mb-16 md:mb-32">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -38,7 +38,7 @@ export default function FeaturesModern() {
         </div>
         
         {/* feature 1 - group credit */}
-        <div className="grid lg:grid-cols-2 gap-24 items-center mb-32">
+        <div className="grid lg:grid-cols-2 gap-12 md:gap-24 items-center mb-16 md:mb-32">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -46,12 +46,12 @@ export default function FeaturesModern() {
             transition={{ duration: 0.8 }}
           >
             {/* OLD: <div className="label mb-6 text-primary">PILLAR I: CREDIT INSTRUMENT</div> */}
-            <div className="label mb-6 text-primary">UNLOCK GROUP PURCHASING POWER</div>
-            <h3 className="text-5xl font-serif font-medium text-white mb-6 leading-tight">
+            <div className="label mb-4 md:mb-6 text-primary">UNLOCK GROUP PURCHASING POWER</div>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif font-medium text-white mb-4 md:mb-6 leading-tight">
               {/* OLD: Aggregate underwriting unlocks <span className="text-primary">5-10x</span> purchasing power */}
               Stop maxing out <span className="italic">one</span> person's credit card
             </h3>
-            <p className="text-text-secondary text-lg mb-8 leading-relaxed">
+            <p className="text-text-secondary text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
               {/* OLD: Legacy banks assess individuals. Tailwind assesses the cohort. By verifying aggregate cash flow via Plaid, we extend "Super Limits" based on combined repayment ability—up to $50,000. */}
               Why limit your group to one $5k card? Tailwind combines your crew's ability to pay and issues limits up to $50k—so the person booking the Airbnb doesn't have to stress.
             </p>
@@ -92,7 +92,7 @@ export default function FeaturesModern() {
         </div>
         
         {/* feature 2 - pot system */}
-        <div className="grid lg:grid-cols-2 gap-24 items-center mb-32">
+        <div className="grid lg:grid-cols-2 gap-12 md:gap-24 items-center mb-16 md:mb-32">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -114,12 +114,12 @@ export default function FeaturesModern() {
             className="order-1 lg:order-2"
           >
             {/* OLD: <div className="label mb-6 text-secondary">PILLAR II: CONTEXT-AWARE LEDGER</div> */}
-            <div className="label mb-6 text-secondary">USE YOUR CARD OR OURS</div>
-            <h3 className="text-5xl font-serif font-medium text-white mb-6 leading-tight">
+            <div className="label mb-4 md:mb-6 text-secondary">USE YOUR CARD OR OURS</div>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif font-medium text-white mb-4 md:mb-6 leading-tight">
               {/* OLD: Flexible containers for <span className="italic">any</span> use case */}
               Your Amex points. <span className="italic">Our</span> math.
             </h3>
-            <p className="text-text-secondary text-lg mb-8 leading-relaxed">
+            <p className="text-text-secondary text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
               {/* OLD: Pots are agnostic to funding source. Toggle between Tracker Mode (link external cards, we track liability) or Banking Mode (pre-funded custodial accounts for instant settlement). */}
               Keep swiping your favorite card for points—just tag purchases to the trip. Or use the Tailwind card for instant splits. Either way, everyone knows what they owe in real-time.
             </p>
@@ -147,7 +147,7 @@ export default function FeaturesModern() {
         </div>
         
         {/* feature 3 - integrations */}
-        <div className="grid lg:grid-cols-2 gap-24 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 md:gap-24 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -155,12 +155,12 @@ export default function FeaturesModern() {
             transition={{ duration: 0.8 }}
           >
             {/* OLD: <div className="label mb-6 text-primary">PILLAR III: INTEGRATION ECOSYSTEM</div> */}
-            <div className="label mb-6 text-primary">YOUR TRIPS, AUTOMATICALLY ORGANIZED</div>
-            <h3 className="text-5xl font-serif font-medium text-white mb-6 leading-tight">
+            <div className="label mb-4 md:mb-6 text-primary">YOUR TRIPS, AUTOMATICALLY ORGANIZED</div>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif font-medium text-white mb-4 md:mb-6 leading-tight">
               {/* OLD: Level 3 data from the apps you <span className="italic">actually use</span> */}
               Finance meets <span className="italic">logistics</span> in one place
             </h3>
-            <p className="text-text-secondary text-lg mb-8 leading-relaxed">
+            <p className="text-text-secondary text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
               {/* OLD: Direct API connections to Uber, Airbnb, SeatGeek. We don't just see "Ticketmaster - $400." We see "Taylor Swift, Section 102, Row 5" and surface the QR codes directly in your dashboard. */}
               That Uber to the airport? We know who was in it and split it 3 ways. That Airbnb? Check-in code and WiFi password are already in the app. Tickets? QR codes ready when you need them.
             </p>

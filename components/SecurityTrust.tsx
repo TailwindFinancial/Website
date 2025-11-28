@@ -7,11 +7,11 @@ import { motion } from 'framer-motion';
 // security component
 export default function SecurityTrust() {
   return (
-    <section className="relative py-48 bg-gradient-to-b from-gradient-start via-black to-gradient-start overflow-hidden">
+    <section className="relative py-24 md:py-48 bg-gradient-to-b from-gradient-start via-black to-gradient-start overflow-hidden">
       {/* content - proper padding */}
       <div className="relative z-10 max-w-container mx-auto section-padding">
         {/* header */}
-        <div className="text-center max-w-4xl mx-auto mb-32">
+        <div className="text-center max-w-4xl mx-auto mb-16 md:mb-32">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -23,17 +23,17 @@ export default function SecurityTrust() {
         </div>
         
         {/* three key innovations - no containers, clean flow */}
-        <div className="space-y-32">
+        <div className="space-y-16 md:space-y-32">
           {/* travel mode */}
-          <div className="grid lg:grid-cols-2 gap-24 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-24 items-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="text-7xl font-serif font-medium text-primary/20 mb-6">01</div>
-              <h3 className="text-4xl font-serif font-medium text-white mb-6">Active Geolocation Security</h3>
+              <div className="text-5xl md:text-7xl font-serif font-medium text-primary/20 mb-4 md:mb-6">01</div>
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif font-medium text-white mb-4 md:mb-6">Active Geolocation Security</h3>
               <div className="label mb-4 text-secondary">TRAVEL MODE</div>
               <p className="text-text-secondary text-lg mb-6 leading-relaxed">
                 The card's authorization logic syncs with your phone's GPS. If you're in Tokyo, your card works in Tokyo. If you're in Paris, it works in Paris. Zero false fraud blocks.

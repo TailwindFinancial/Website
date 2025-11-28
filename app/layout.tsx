@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   // page title
   title: "Tailwind - The Operating System for Multi-Player Finance",
   // seo description
-  description: "Stop playing banker. Dynamic group credit, smart ledgers, and platform integrations for trips, events, and shared expenses. Join the waitlist for Q2 2025 launch.",
+  description: "Stop playing banker. Dynamic group credit, smart ledgers, and platform integrations for trips, events, and shared expenses. Join the waitlist for Q1 2026 launch.",
   // open graph
   openGraph: {
     title: "Tailwind - The Operating System for Multi-Player Finance",

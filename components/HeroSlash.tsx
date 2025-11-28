@@ -31,8 +31,8 @@ export default function HeroSlash() {
       </div>
       
       {/* content */}
-      <div className="relative z-10 max-w-container mx-auto px-6 lg:px-20 py-32">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 max-w-container mx-auto px-6 lg:px-20 py-20 md:py-32">
+        <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* left - text */}
           <div>
             {/* waitlist badge */}
@@ -40,10 +40,10 @@ export default function HeroSlash() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/30 rounded-full px-4 py-2 mb-8"
+              className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/30 rounded-full px-3 md:px-4 py-2 mb-6 md:mb-8"
             >
               <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-              <span className="text-primary text-sm font-semibold">Launching Q2 2025</span>
+              <span className="text-primary text-xs md:text-sm font-semibold">Launching Q1 2026</span>
             </motion.div>
 
             {/* headline */}
@@ -62,7 +62,7 @@ export default function HeroSlash() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-body mb-8"
+              className="text-body mb-6 md:mb-8"
             >
               {/* OLD: The first operating system for multi-player finance. Aggregate credit, smart ledgers, and platform-native integrations—all in one. */}
               Book the villa. Split the dinner. Skip the Venmo drama. Tailwind combines your group's purchasing power into one card that handles everything.
@@ -84,10 +84,10 @@ export default function HeroSlash() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
-                  className="flex-1 bg-white/5 border border-white/10 h-12 px-6 text-white placeholder:text-text-tertiary rounded-full focus:outline-none focus:border-primary/50 backdrop-blur-sm transition-all"
+                  className="flex-1 bg-white/5 border border-white/10 h-12 md:h-12 px-4 md:px-6 text-white placeholder:text-text-tertiary rounded-full focus:outline-none focus:border-primary/50 backdrop-blur-sm transition-all text-sm md:text-base"
                 />
                 {/* submit */}
-                <button type="submit" className="btn-primary">
+                <button type="submit" className="btn-primary whitespace-nowrap px-6 md:px-8">
                   Join Waitlist
                 </button>
               </motion.form>
