@@ -10,23 +10,27 @@ export default function HowItWorks() {
   const steps = [
     {
       number: '01',
-      title: 'Create Your Group',
-      description: 'Invite friends, family, or colleagues. Verify identities via Plaid for instant Group Score calculation.',
+      title: 'Invite Your Crew',
+      description: 'Add friends to unlock your combined purchasing power. The more verified members, the higher your group limit.',
+      // OLD: title: 'Create Your Group', description: 'Invite friends, family, or colleagues. Verify identities via Plaid for instant Group Score calculation.'
     },
     {
       number: '02',
-      title: 'Get Your Credit Line',
-      description: 'Receive aggregate credit limit based on combined liquidity. Individual liability caps protect everyone.',
+      title: 'Get Your Card',
+      description: 'Instant virtual card to your phone. Physical card ships before your trip. Use it anywhere Visa is accepted.',
+      // OLD: title: 'Get Your Credit Line', description: 'Receive aggregate credit limit based on combined liquidity. Individual liability caps protect everyone.'
     },
     {
       number: '03',
-      title: 'Spend Together',
-      description: 'Use virtual or physical cards. All transactions auto-split. Real-time reconciliation. Zero manual work.',
+      title: 'Spend Smarter',
+      description: 'One person swipes. Everyone splits automatically. Track who owes what in real-time with zero manual entry.',
+      // OLD: title: 'Spend Together', description: 'Use virtual or physical cards. All transactions auto-split. Real-time reconciliation. Zero manual work.'
     },
     {
       number: '04',
       title: 'Settle Instantly',
-      description: 'Net positions calculated live. Settle via card, bank transfer, or let it roll to next trip.',
+      description: 'The app handles the math. Charges split automatically or settle later. No more awkward Venmo requests.',
+      // OLD: description: 'Net positions calculated live. Settle via card, bank transfer, or let it roll to next trip.'
     },
   ];
 
@@ -50,7 +54,8 @@ export default function HowItWorks() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
           className="text-slash-body"
         >
-          From group creation to instant settlement in four simple steps
+          {/* OLD: From group creation to instant settlement in four simple steps */}
+          From group chat to getaway in four steps
         </motion.p>
       </div>
       

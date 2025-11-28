@@ -53,7 +53,8 @@ export default function HeroSlash() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="heading-display mb-6"
             >
-              Stop playing <span className="italic">banker</span>
+              {/* OLD: Stop playing <span className="italic">banker</span> */}
+              The card your group <span className="italic">deserves</span>
             </motion.h1>
             
             {/* subheadline */}
@@ -63,7 +64,8 @@ export default function HeroSlash() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-body mb-8"
             >
-              The first operating system for multi-player finance. Aggregate credit, smart ledgers, and platform-native integrations—all in one.
+              {/* OLD: The first operating system for multi-player finance. Aggregate credit, smart ledgers, and platform-native integrations—all in one. */}
+              Book the villa. Split the dinner. Skip the Venmo drama. Tailwind combines your group's purchasing power into one card that handles everything.
             </motion.p>
             
             {/* waitlist form */}
