@@ -54,7 +54,7 @@ export default function WaitlistCTA() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
             onSubmit={handleSubmit}
-            className="max-w-xl mx-auto space-y-6"
+            className="max-w-xl mx-auto space-y-4 md:space-y-6"
           >
             {/* email */}
             <input
@@ -63,14 +63,14 @@ export default function WaitlistCTA() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
               required
-              className="w-full bg-white/5 border border-white/10 h-14 md:h-16 px-6 md:px-8 text-white placeholder:text-text-tertiary rounded-2xl focus:outline-none focus:border-primary/50 backdrop-blur-sm transition-all text-base md:text-lg"
+              className="w-full bg-white/5 border border-white/10 min-h-[56px] h-14 md:h-16 px-4 sm:px-6 md:px-8 text-white placeholder:text-text-tertiary rounded-2xl focus:outline-none focus:border-primary/50 backdrop-blur-sm transition-all text-base md:text-lg"
             />
             
             {/* group size */}
             <select
               value={groupSize}
               onChange={(e) => setGroupSize(e.target.value)}
-              className="w-full bg-white/5 border border-white/10 h-14 md:h-16 px-6 md:px-8 text-white rounded-2xl focus:outline-none focus:border-primary/50 backdrop-blur-sm transition-all appearance-none text-base md:text-lg"
+              className="w-full bg-white/5 border border-white/10 min-h-[56px] h-14 md:h-16 px-4 sm:px-6 md:px-8 text-white rounded-2xl focus:outline-none focus:border-primary/50 backdrop-blur-sm transition-all appearance-none text-base md:text-lg"
             >
               <option value="" className="bg-black">Typical group size (optional)</option>
               <option value="2-4" className="bg-black">2-4 people</option>
@@ -80,7 +80,7 @@ export default function WaitlistCTA() {
             </select>
             
             {/* submit */}
-            <button type="submit" className="btn-primary w-full h-14 md:h-16 text-sm md:text-base">
+            <button type="submit" className="btn-primary w-full min-h-[56px] h-14 md:h-16 text-sm md:text-base">
               Reserve Your Spot
             </button>
             

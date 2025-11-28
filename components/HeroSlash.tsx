@@ -75,7 +75,7 @@ export default function HeroSlash() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 onSubmit={handleSubmit}
-                className="flex flex-col sm:flex-row gap-3"
+                className="flex flex-col md:flex-row gap-3 md:gap-4"
               >
                 {/* email input */}
                 <input
@@ -84,10 +84,10 @@ export default function HeroSlash() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
-                  className="flex-1 bg-white/5 border border-white/10 h-12 md:h-12 px-4 md:px-6 text-white placeholder:text-text-tertiary rounded-full focus:outline-none focus:border-primary/50 backdrop-blur-sm transition-all text-sm md:text-base"
+                  className="flex-1 bg-white/5 border border-white/10 min-h-[52px] h-14 md:h-14 px-4 sm:px-6 md:px-6 text-white placeholder:text-text-tertiary rounded-full focus:outline-none focus:border-primary/50 backdrop-blur-sm transition-all text-sm md:text-base"
                 />
                 {/* submit */}
-                <button type="submit" className="btn-primary whitespace-nowrap px-6 md:px-8">
+                <button type="submit" className="btn-primary whitespace-nowrap min-h-[52px] h-14 md:h-14 px-6 md:px-8">
                   Join Waitlist
                 </button>
               </motion.form>
