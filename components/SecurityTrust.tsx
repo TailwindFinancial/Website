@@ -25,7 +25,7 @@ export default function SecurityTrust() {
         {/* three key innovations - no containers, clean flow */}
         <div className="space-y-16 md:space-y-32">
           {/* travel mode */}
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-24 items-center">
+          <div id="travel" className="grid lg:grid-cols-2 gap-8 md:gap-24 items-center scroll-mt-24">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export default function SecurityTrust() {
           </div>
           
           {/* phoenix protocol */}
-          <div className="grid lg:grid-cols-2 gap-24 items-center">
+          <div id="phoenix" className="grid lg:grid-cols-2 gap-24 items-center scroll-mt-24">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -84,7 +84,7 @@ export default function SecurityTrust() {
           </div>
           
           {/* zero-fx */}
-          <div className="grid lg:grid-cols-2 gap-24 items-center">
+          <div id="zero-fx" className="grid lg:grid-cols-2 gap-24 items-center scroll-mt-24">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

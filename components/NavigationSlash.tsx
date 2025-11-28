@@ -22,6 +22,8 @@ export default function NavigationSlash() {
   const [isScrolled, setIsScrolled] = useState(false);
   // active dropdown state
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  // mobile dropdown state
+  const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
 
   // scroll detection
   useEffect(() => {
@@ -74,21 +76,13 @@ export default function NavigationSlash() {
               {activeDropdown === 'company' && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 mt-0 w-80 bg-gradient-to-b from-[#0D0D0D] to-[#0A0A0A] border border-white/10 rounded-2xl shadow-2xl p-8">
                   <div className="space-y-2">
-                    <a href="#faq" className="flex items-center space-x-3 p-4 rounded-xl hover:bg-white/5 transition-all group">
-                      <HelpCircle className="w-5 h-5 text-text-tertiary group-hover:text-primary transition-colors" />
-                      <div className="flex-1">
-                        <div className="text-white text-sm font-semibold group-hover:text-primary transition-colors">FAQ</div>
-                        <div className="text-text-tertiary text-xs">Common questions answered</div>
-                      </div>
-                    </a>
-                    
-                    <a href="#careers" className="flex items-center space-x-3 p-4 rounded-xl hover:bg-white/5 transition-all group">
+                    <Link href="/careers" className="flex items-center space-x-3 p-4 rounded-xl hover:bg-white/5 transition-all group">
                       <Briefcase className="w-5 h-5 text-text-tertiary group-hover:text-primary transition-colors" />
                       <div className="flex-1">
                         <div className="text-white text-sm font-semibold group-hover:text-primary transition-colors">Careers</div>
                         <div className="text-text-tertiary text-xs">Join our team</div>
                       </div>
-                    </a>
+                    </Link>
                     
                     <Link href="/company" className="flex items-center space-x-3 p-4 rounded-xl hover:bg-white/5 transition-all group">
                       <Users className="w-5 h-5 text-text-tertiary group-hover:text-primary transition-colors" />
@@ -98,47 +92,47 @@ export default function NavigationSlash() {
                       </div>
                     </Link>
                     
-                    <a href="#blog" className="flex items-center space-x-3 p-4 rounded-xl hover:bg-white/5 transition-all group">
+                    <Link href="/blog" className="flex items-center space-x-3 p-4 rounded-xl hover:bg-white/5 transition-all group">
                       <FileText className="w-5 h-5 text-text-tertiary group-hover:text-primary transition-colors" />
                       <div className="flex-1">
                         <div className="text-white text-sm font-semibold group-hover:text-primary transition-colors">Blog</div>
                         <div className="text-text-tertiary text-xs">Product updates & insights</div>
                       </div>
-                    </a>
+                    </Link>
                     
-                    <a href="#engineering" className="flex items-center space-x-3 p-4 rounded-xl hover:bg-white/5 transition-all group">
+                    <Link href="/engineering" className="flex items-center space-x-3 p-4 rounded-xl hover:bg-white/5 transition-all group">
                       <Code className="w-5 h-5 text-text-tertiary group-hover:text-primary transition-colors" />
                       <div className="flex-1">
                         <div className="text-white text-sm font-semibold group-hover:text-primary transition-colors">Engineering Blog</div>
                         <div className="text-text-tertiary text-xs">Deep dives & technical posts</div>
                       </div>
-                    </a>
+                    </Link>
                     
-                    <a href="#security" className="flex items-center space-x-3 p-4 rounded-xl hover:bg-white/5 transition-all group">
+                    <Link href="/security" className="flex items-center space-x-3 p-4 rounded-xl hover:bg-white/5 transition-all group">
                       <Lock className="w-5 h-5 text-text-tertiary group-hover:text-primary transition-colors" />
                       <div className="flex-1">
                         <div className="text-white text-sm font-semibold group-hover:text-primary transition-colors">Security</div>
                         <div className="text-text-tertiary text-xs">Bank-grade protection</div>
                       </div>
-                    </a>
+                    </Link>
                     
-                    <a href="#help" className="flex items-center space-x-3 p-4 rounded-xl hover:bg-white/5 transition-all group">
+                    <Link href="/help" className="flex items-center space-x-3 p-4 rounded-xl hover:bg-white/5 transition-all group">
                       <Building2 className="w-5 h-5 text-text-tertiary group-hover:text-primary transition-colors" />
                       <div className="flex-1">
                         <div className="text-white text-sm font-semibold group-hover:text-primary transition-colors">Help Center</div>
                         <div className="text-text-tertiary text-xs">Documentation & guides</div>
                       </div>
-                    </a>
+                    </Link>
                     
                     <div className="border-t border-white/10 my-4"></div>
                     
-                    <a href="mailto:team@tailwind.finance" className="flex items-center space-x-3 p-4 rounded-xl hover:bg-white/5 transition-all group">
+                    <Link href="/contact" className="flex items-center space-x-3 p-4 rounded-xl hover:bg-white/5 transition-all group">
                       <Mail className="w-5 h-5 text-text-tertiary group-hover:text-primary transition-colors" />
                       <div className="flex-1">
                         <div className="text-white text-sm font-semibold group-hover:text-primary transition-colors">Contact</div>
                         <div className="text-text-tertiary text-xs">Get in touch with us</div>
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               )}
@@ -335,21 +329,124 @@ export default function NavigationSlash() {
 
         {/* mobile menu */}
         {isOpen && (
-          <div className="lg:hidden absolute top-20 left-0 right-0 bg-dark-bg/95 backdrop-blur-md border-t border-white/10">
-            <div className="flex flex-col p-6 space-y-4">
-              <Link href="/product" onClick={() => setIsOpen(false)} className="text-base text-text-secondary hover:text-white transition-colors">
-                Product
-              </Link>
-              <Link href="/solutions" onClick={() => setIsOpen(false)} className="text-base text-text-secondary hover:text-white transition-colors">
-                Solutions
-              </Link>
-              <Link href="/company" onClick={() => setIsOpen(false)} className="text-base text-text-secondary hover:text-white transition-colors">
-                Company
-              </Link>
-              <Link href="/faq" onClick={() => setIsOpen(false)} className="text-base text-text-secondary hover:text-white transition-colors">
+          <div className="lg:hidden absolute top-20 left-0 right-0 bg-dark-bg/95 backdrop-blur-md border-t border-white/10 max-h-[calc(100vh-5rem)] overflow-y-auto">
+            <div className="flex flex-col p-6 space-y-3">
+              
+              {/* Products expandable */}
+              <div>
+                <button 
+                  onClick={() => setMobileDropdown(mobileDropdown === 'products' ? null : 'products')}
+                  className="w-full flex items-center justify-between text-base text-text-secondary hover:text-white transition-colors py-2"
+                >
+                  <span>Products</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileDropdown === 'products' ? 'rotate-180' : ''}`} />
+                </button>
+                {mobileDropdown === 'products' && (
+                  <div className="pl-4 mt-2 space-y-2 border-l-2 border-primary/30">
+                    <Link href="/product" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      The Card
+                    </Link>
+                    <Link href="/product#pot" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      The Pot
+                    </Link>
+                    <Link href="/product#integrations" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      Integrations
+                    </Link>
+                    <Link href="/#rewards" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      Rewards
+                    </Link>
+                    <Link href="/product#travel" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      Travel Mode
+                    </Link>
+                    <Link href="/product#phoenix" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      Phoenix Protocol
+                    </Link>
+                    <Link href="/product#zero-fx" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      Zero-FX
+                    </Link>
+                    <Link href="/product#api" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      API
+                    </Link>
+                    <Link href="/product#analytics" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      Analytics
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* Solutions expandable */}
+              <div>
+                <button 
+                  onClick={() => setMobileDropdown(mobileDropdown === 'solutions' ? null : 'solutions')}
+                  className="w-full flex items-center justify-between text-base text-text-secondary hover:text-white transition-colors py-2"
+                >
+                  <span>Solutions</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileDropdown === 'solutions' ? 'rotate-180' : ''}`} />
+                </button>
+                {mobileDropdown === 'solutions' && (
+                  <div className="pl-4 mt-2 space-y-2 border-l-2 border-primary/30">
+                    <Link href="/solutions#travel" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      Group Travel
+                    </Link>
+                    <Link href="/solutions#events" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      Events
+                    </Link>
+                    <Link href="/solutions#living" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      Shared Living
+                    </Link>
+                    <Link href="/solutions#enterprise" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      Corporate
+                    </Link>
+                    <Link href="/solutions#weddings" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      Celebrations
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* Company expandable */}
+              <div>
+                <button 
+                  onClick={() => setMobileDropdown(mobileDropdown === 'company' ? null : 'company')}
+                  className="w-full flex items-center justify-between text-base text-text-secondary hover:text-white transition-colors py-2"
+                >
+                  <span>Company</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${mobileDropdown === 'company' ? 'rotate-180' : ''}`} />
+                </button>
+                {mobileDropdown === 'company' && (
+                  <div className="pl-4 mt-2 space-y-2 border-l-2 border-primary/30">
+                    <Link href="/careers" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      Careers
+                    </Link>
+                    <Link href="/company" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      About
+                    </Link>
+                    <Link href="/blog" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      Blog
+                    </Link>
+                    <Link href="/engineering" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      Engineering Blog
+                    </Link>
+                    <Link href="/security" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      Security
+                    </Link>
+                    <Link href="/help" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      Help Center
+                    </Link>
+                    <Link href="/contact" onClick={() => setIsOpen(false)} className="block text-sm text-text-tertiary hover:text-white transition-colors py-2">
+                      Contact
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* FAQ link */}
+              <Link href="/faq" onClick={() => setIsOpen(false)} className="text-base text-text-secondary hover:text-white transition-colors py-2">
                 FAQ
               </Link>
-              <div className="border-t border-white/10 pt-4">
+
+              {/* Join Waitlist button */}
+              <div className="border-t border-white/10 pt-4 mt-2">
                 <button onClick={scrollToWaitlist} className="w-full btn-primary">
                   Join Waitlist
                 </button>

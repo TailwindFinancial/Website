@@ -51,7 +51,7 @@ export default function DashboardExperience() {
           </div>
           
           {/* ai monitoring */}
-          <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
+          <div id="analytics" className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center scroll-mt-24">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}

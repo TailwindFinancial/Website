@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 // rewards component
 export default function RewardsIncentives() {
   return (
-    <section className="relative py-24 md:py-48 bg-gradient-to-b from-gradient-start via-gradient-end to-gradient-start overflow-hidden">
+    <section id="rewards" className="relative py-24 md:py-48 bg-gradient-to-b from-gradient-start via-gradient-end to-gradient-start overflow-hidden scroll-mt-24">
       {/* content - proper padding */}
       <div className="relative z-10 max-w-container mx-auto section-padding">
         {/* header */}
