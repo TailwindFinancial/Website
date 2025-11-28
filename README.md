@@ -1,213 +1,273 @@
-# Tailwind - Pre-Launch Waitlist Site
+# Tailwind
 
-A premium, dark-themed landing page for Tailwind's pre-seed/pre-launch phase, matching Slash.com's institutional minimalist aesthetic.
+A vertical financial platform for multi-party commerce.
 
-## 🎨 Design Philosophy
+## Documentation
 
-**Dark Premium Aesthetic** - Matching Slash.com:
-- Pure black backgrounds (#000000)
-- Elegant serif typography (Fraunces) for headlines
-- System fonts for UI and body text
-- Gold gradient accents for premium feel
-- 24px rounded corners (Slash's signature)
-- Subtle glassmorphism on navigation
+- [Contributing Guidelines](CONTRIBUTING.md) - Workflow and standards for team contributions
+- [Architecture Documentation](ARCHITECTURE.md) - Technical architecture and system design
+- [Pull Request Template](.github/pull_request_template.md) - Standard PR format
 
-## 🏗️ Tech Stack
+## Overview
 
-- **Framework**: Next.js 14 (App Router with file-based routing)
-- **Language**: TypeScript (every line commented)
-- **Styling**: Tailwind CSS with custom dark theme
-- **Animations**: Framer Motion (snappy cubic-bezier easing)
-- **Icons**: Lucide React
-- **Fonts**: Fraunces (serif), System fonts (sans-serif)
+Tailwind is a pre-launch product website built for institutional marketing during the pre-seed phase. The site architecture follows enterprise design standards with a focus on conversion optimization and regulatory compliance.
 
-## 📁 Complete Site Structure
+## Technology Stack
+
+- Next.js 14 with App Router
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+
+## Project Structure
 
 ```
-tailwindOS/
-├── app/
-│   ├── layout.tsx              # Root layout with dark theme
-│   ├── page.tsx                # Homepage (waitlist focused)
-│   ├── globals.css             # Custom dark theme styles
-│   ├── product/
-│   │   └── page.tsx            # Product deep dive (3 pillars)
-│   ├── solutions/
-│   │   └── page.tsx            # Use cases (Travel, Events, etc.)
-│   ├── company/
-│   │   └── page.tsx            # Mission, vision, team
-│   └── faq/
-│       └── page.tsx            # FAQ with accordion
-├── components/
-│   ├── NavigationSlash.tsx     # Dark nav with dropdowns
-│   ├── HeroSlash.tsx           # Hero with waitlist form
-│   ├── HowItWorks.tsx          # 4-step process
-│   ├── FeaturesSlash.tsx       # Feature cards
-│   ├── DualModeSlash.tsx       # Pot explanation
-│   ├── IntegrationSlash.tsx    # Platform integrations
-│   ├── WaitlistCTA.tsx         # Waitlist conversion form
-│   └── FooterSlash.tsx         # Footer with compliance
-└── public/
-    └── logo.png                # Your lightning bolt logo
+/app                    # Next.js application routes
+  /company             # Company information
+  /faq                 # Frequently asked questions
+  /product             # Product documentation
+  /solutions           # Use case demonstrations
+  layout.tsx           # Root application layout
+  page.tsx             # Homepage
+  globals.css          # Global styles
+
+/components            # React components
+  DashboardExperience.tsx
+  EnterprisePower.tsx
+  FeaturesModern.tsx
+  FooterSlash.tsx
+  HowItWorks.tsx
+  NavigationSlash.tsx
+  RewardsIncentives.tsx
+  SecureByDesign.tsx
+  SecurityTrust.tsx
+  WaitlistCTA.tsx
+
+/public                # Static assets
 ```
 
-## 🚀 Running the Site
+## Development Setup
+
+Install dependencies:
 
 ```bash
-# Install dependencies
 npm install
+```
 
-# Run development server
+Run development server:
+
+```bash
 npm run dev
+```
 
-# Build for production
+Build for production:
+
+```bash
 npm run build
+```
 
-# Start production server
+Preview production build:
+
+```bash
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000)
+The application runs on `http://localhost:3000`.
 
-## 📄 Pages & Routes
+## Design System
 
-### Homepage `/`
-- Waitlist-focused hero with email capture
-- "Now Accepting Waitlist Applications" badge
-- Animated gold card visual
-- How It Works (4 steps)
-- Features showcase
-- Dual-Mode Pot explanation
-- Platform integrations
-- Final waitlist CTA
+### Color Palette
 
-### Product Page `/product`
-- Deep dive into 3 pillars
-- Pillar I: The Card (aggregate underwriting)
-- Pillar II: The Pot (dual-mode system)
-- Pillar III: Integrations (Level 3 data)
-- Waitlist CTA
-
-### Solutions Page `/solutions`
-- Group Travel use case
-- Events & Entertainment
-- Shared Living (roommates)
-- Corporate Offsites
-- Waitlist CTA
-
-### Company Page `/company`
-- Mission statement
-- Problem we're solving
-- Team info (placeholder)
-- Waitlist CTA
-
-### FAQ Page `/faq`
-- 10 comprehensive Q&A items
-- Accordion-style interface
-- Waitlist CTA
-
-## 🎯 Pre-Launch Features
-
-✅ **No fake stats** - Honest about pre-launch status  
-✅ **Waitlist focused** - Every page drives to conversion  
-✅ **Launch timeline** - "Q2 2025" messaging throughout  
-✅ **Compliance** - Full disclaimers about planned features  
-✅ **Professional** - Institutional-grade design  
-
-## 🎨 Design System
-
-### Colors
-- **Primary**: #5DD9D2 (cyan from logo)
-- **Dark BG**: #000000 (pure black)
-- **Dark Card**: #0D0D0D (elevated surfaces)
-- **Gold Gradient**: #C9A961 → #D4B876 (card visual)
-- **Text**: White, #A3A3A3 (secondary), #737373 (tertiary)
+- Primary: `#5DD9D2`
+- Background: `#000000`
+- Surface: `#0D0D0D`
+- Text Primary: `#FFFFFF`
+- Text Secondary: `#A3A3A3`
+- Text Tertiary: `#737373`
+- Accent Gold: `#C9A961` to `#D4B876`
 
 ### Typography
-- **Display (72-96px)**: Fraunces Serif, Medium weight, Italic emphasis
-- **H2 (48-72px)**: Fraunces Serif, Medium weight
-- **Body (18-20px)**: System Sans, Gray color
-- **Labels (12px)**: Uppercase, Wide tracking
+
+- Display: Fraunces, 72-96px
+- Heading: Fraunces, 48-72px
+- Body: System Sans, 18-20px
+- Label: System Sans, 12px
 
 ### Spacing
-- **Sections**: 160px vertical padding
-- **Container**: 1440px max-width
-- **Horizontal**: 80px padding (desktop), 24px (mobile)
 
-## 🔧 Key Components
+- Section padding: 160px vertical
+- Container max-width: 1440px
+- Horizontal padding: 80px desktop, 24px mobile
+- Border radius: 24px
 
-### WaitlistCTA
-- Email + optional group size
-- Success state with checkmark
-- Privacy reassurance
-- Used on every page
+## Contribution Guidelines
 
-### NavigationSlash
-- Fixed glassmorphism on scroll
-- Logo uses **sans-serif** (as requested)
-- Dropdown menus (hover state)
-- Mobile hamburger menu
-- "Join Waitlist" CTA button
+For detailed contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
-### HeroSlash
-- Elegant serif headline
-- Waitlist badge with pulse animation
-- Inline email capture form
-- Animated floating gold card
-- Launch timeline message
+### Branch Naming
 
-### FooterSlash
-- 4-column link grid
-- Social links (Twitter, LinkedIn)
-- Full compliance disclaimers
-- Pre-launch messaging in legal text
+Use the following prefixes:
 
-## 🌟 Slash-Style Features
+- `feature/` - New features
+- `fix/` - Bug fixes
+- `refactor/` - Code refactoring
+- `docs/` - Documentation updates
+- `style/` - Visual/CSS changes
+- `perf/` - Performance improvements
 
-✅ **Dark theme** throughout  
-✅ **Elegant serif** headlines with italic emphasis  
-✅ **Gold gradients** for premium feel  
-✅ **Floating card** animation  
-✅ **24px rounded** corners (Slash's style)  
-✅ **Glassmorphism** navigation  
-✅ **Snappy animations** (cubic-bezier easing)  
-✅ **Full routing** with Next.js App Router  
-✅ **Every line** has comments  
-✅ **TypeScript** throughout  
+Example: `feature/waitlist-integration`
 
-## 📱 Responsive Design
+### Commit Messages
 
-- Mobile-first approach
-- Hamburger menu on mobile
-- Grid layouts adapt to screen size
-- Touch-friendly button sizes
-- Optimized for all devices
+Follow conventional commit format:
 
-## 🔐 Compliance
+```
+type(scope): subject
 
-All pages include proper disclaimers:
-- "Planned for Q2 2025" messaging
-- Banking partner disclosure (Evolve Bank & Trust)
+body (optional)
+```
+
+Types:
+- `feat` - New feature
+- `fix` - Bug fix
+- `refactor` - Code restructuring
+- `style` - Visual changes
+- `perf` - Performance optimization
+- `docs` - Documentation
+- `chore` - Maintenance tasks
+
+Example:
+```
+feat(waitlist): add email validation logic
+
+Implement client-side validation for waitlist form
+with error state handling and success feedback.
+```
+
+### Code Standards
+
+1. All TypeScript files must pass type checking without errors.
+2. Component files require explicit type definitions for props.
+3. CSS classes follow Tailwind utility-first conventions.
+4. No inline styles except for dynamic values.
+5. Animation durations must use standard cubic-bezier easing.
+6. All user-facing text must follow brand voice guidelines.
+
+### Pull Request Process
+
+See the [Pull Request Template](.github/pull_request_template.md) for the standard format.
+
+1. Create feature branch from `main`.
+2. Complete implementation with tests if applicable.
+3. Run build command to verify no errors.
+4. Push branch and create pull request using template.
+5. Request review from at least one team member.
+6. Address all review comments.
+7. Squash and merge after approval.
+
+### Testing Requirements
+
+Before submitting a pull request:
+
+1. Verify the application builds without errors.
+2. Test responsive behavior at mobile, tablet, and desktop breakpoints.
+3. Verify all navigation links function correctly.
+4. Test form submissions and state management.
+5. Check browser console for warnings or errors.
+
+### Code Review Checklist
+
+Reviewers must verify:
+
+- Type safety is maintained throughout changes.
+- Component structure follows established patterns.
+- No console logs or debug code remains.
+- Responsive design works across breakpoints.
+- Animations are performant and appropriate.
+- Accessibility standards are maintained.
+- Code follows existing style conventions.
+
+For complete code standards and testing requirements, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Deployment
+
+The application deploys automatically on merge to `main` branch. Deployment target is configured in Vercel project settings.
+
+### Pre-Deployment Checklist
+
+- Build completes without errors.
+- All environment variables are configured.
+- Type checking passes.
+- No console warnings in production build.
+
+## Environment Configuration
+
+Required environment variables:
+
+```
+NEXT_PUBLIC_API_URL=
+NEXT_PUBLIC_ANALYTICS_ID=
+```
+
+Contact technical lead for production credentials.
+
+## Architecture Decisions
+
+For detailed architecture documentation, see [ARCHITECTURE.md](ARCHITECTURE.md).
+
+### Routing Strategy
+
+File-based routing through Next.js App Router. Each route corresponds to a directory in `/app`.
+
+### State Management
+
+Client-side state managed through React hooks. No global state library required for current scope.
+
+### Styling Approach
+
+Utility-first CSS through Tailwind. Component-specific styles are colocated in component files.
+
+### Animation Strategy
+
+Framer Motion for complex animations. CSS transitions for simple state changes.
+
+## Performance Targets
+
+- First Contentful Paint: Under 1.5s
+- Time to Interactive: Under 3.0s
+- Lighthouse Performance Score: Above 90
+
+## Browser Support
+
+- Chrome: Last 2 versions
+- Firefox: Last 2 versions
+- Safari: Last 2 versions
+- Edge: Last 2 versions
+
+## Security Considerations
+
+- All form inputs must be validated client-side and server-side.
+- User data must be transmitted over HTTPS.
+- No sensitive credentials in client-side code.
+- Environment variables must never be committed.
+
+## Compliance Requirements
+
+All marketing content must include:
+
+- Feature availability disclaimers
+- Banking partner disclosures
 - FDIC insurance information
-- Feature availability subject to change
-- Privacy and terms links
+- Privacy policy references
+- Terms of service references
 
-## 🎯 Conversion Focused
+## Contact
 
-Every page optimized for waitlist signups:
-- Hero email capture
-- Multiple waitlist CTAs
-- Clear value proposition
-- Social proof (when available)
-- Launch timeline transparency
-
-## 💼 Next Steps
-
-1. **Backend Integration**: Connect waitlist forms to Mailchimp/Airtable
-2. **Analytics**: Add Mixpanel/Amplitude tracking
-3. **SEO**: Add metadata for each page
-4. **Content**: Replace placeholder visuals with real mockups
-5. **Legal**: Finalize privacy policy and terms
+For technical questions, contact the engineering team lead.
+For design questions, contact the product design lead.
+For compliance questions, contact the legal advisor.
 
 ## License
 
-Proprietary - Tailwind Financial, Inc. © 2025
+Proprietary. Tailwind Financial, Inc. All rights reserved.
